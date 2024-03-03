@@ -72,6 +72,7 @@ def editar_livro_por_id(livro_id: int, livro_editado : Livro):
     raise HTTPException(status_code=404, detail="Livro não encontrado")
 
 
+# Excluir
 @app.delete('/livros/{livro_id}')
 def excluir_livros(livro_id: int):
     for indice, livro in enumerate(livros):
